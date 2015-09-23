@@ -23,8 +23,8 @@ I hope in future I'll be able to produce a proper SWI-Prolog pack installer, usi
 In time being, producing the typelib required by PLGI can be done (once built and installed graph-gtk)
 
 $ g-ir-scanner --nsversion=1.0 --warn-all --pkg=graph-gtk --namespace=GraphGtk --include=Gtk-3.0 --library=graph-gtk --output GraphGtk.gir *.[ch]
-$ g-ir-compiler --output=GraphGtk.typelib GraphGtk.gir
+$ g-ir-compiler --output=GraphGtk-1.0.typelib GraphGtk.gir
 
 Then
 
-$ sudo cp GraphGtk.typelib /usr/lib/girepository-1.0
+$ sudo cp GraphGtk-1.0.typelib /usr/lib/girepository-1.0
