@@ -12,7 +12,7 @@
 %
 :- plgi_use_namespace('GraphGtk').
 
-gg_test :-
+simple_container :-
 	gtk_window_new('GTK_WINDOW_TOPLEVEL', Window),
 	gtk_window_set_default_size(Window, 800, 600),
 	g_signal_connect(Window, destroy, gtk_main_quit/0, {null}, _),
