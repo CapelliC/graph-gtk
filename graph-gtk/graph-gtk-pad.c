@@ -30,7 +30,7 @@ graph_gtk_pad_init (GraphGtkPad *self)
 static void
 graph_gtk_pad_dispose (GObject *object)
 {
-  GraphGtkPad *self = (GraphGtkPad *)object;
+  //CC GraphGtkPad *self = (GraphGtkPad *)object;
 
   G_OBJECT_CLASS (graph_gtk_pad_parent_class)->dispose (object);
 }
@@ -38,7 +38,7 @@ graph_gtk_pad_dispose (GObject *object)
 static void
 graph_gtk_pad_finalize (GObject *object)
 {
-  GraphGtkPad *self = (GraphGtkPad *)object;
+  //CC GraphGtkPad *self = (GraphGtkPad *)object;
 
   g_signal_handlers_destroy (object);
   G_OBJECT_CLASS (graph_gtk_pad_parent_class)->finalize (object);

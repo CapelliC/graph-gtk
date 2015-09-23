@@ -71,13 +71,29 @@ void		graph_gtk_node_set_name(GraphGtkNode* self, const gchar* name);
 const gchar*	graph_gtk_node_get_name(GraphGtkNode* self);
 void		graph_gtk_node_render(GraphGtkNode* self, cairo_t* cairo);
 void		graph_gtk_node_add_pad(GraphGtkNode* self, const gchar* pad_name, gboolean output);
-void graph_gtk_node_remove_pads(GraphGtkNode *self);
+void		graph_gtk_node_remove_pads(GraphGtkNode *self);
+/**
+* graph_gtk_node_get_pads:
+* Returns: (transfer none) (element-type GraphGtkPad): get all pads on node
+*/
 GList*		graph_gtk_node_get_pads(GraphGtkNode* self);
+/**
+* graph_gtk_node_get_input_pads:
+* Returns: (transfer none) (element-type GraphGtkPad): get all input pads to node
+*/
 GList*		graph_gtk_node_get_input_pads(GraphGtkNode* self);
+/**
+* graph_gtk_node_get_output_pads:
+* Returns: (transfer none) (element-type GraphGtkPad): get all output pads to node
+*/
 GList*		graph_gtk_node_get_output_pads(GraphGtkNode* self);
 void		graph_gtk_node_connect_to(GraphGtkNode* source, const gchar* output_pad, GraphGtkNode* sink, const gchar* input_pad);
 gboolean	graph_gtk_node_recalculate_size(GraphGtkNode* self);
 gboolean	graph_gtk_node_is_within(GraphGtkNode* self, int x, int y);	//check whether this position is within the node
+/**
+* graph_gtk_node_is_on_pad:
+* Returns: (transfer none): matched pad, if any
+*/
 GraphGtkPad*	graph_gtk_node_is_on_pad(GraphGtkNode* self, int x, int y);	//check whether this position is within a pad on this node
 void		graph_gtk_node_set_image(GraphGtkNode* self, cairo_surface_t* image);
 void		graph_gtk_node_set_image_size(GraphGtkNode* self, gint width, gint height);
@@ -85,4 +101,11 @@ void		graph_gtk_node_show_image(GraphGtkNode* self, gboolean show_image);
 
 G_END_DECLS
 
+/*
+graph-gtk-node.h:75: Warning: GraphGtk: graph_gtk_node_get_pads: return value: Missing (element-type) annotation
+graph-gtk-node.h:76: Warning: GraphGtk: graph_gtk_node_get_input_pads: return value: Missing (element-type) annotation
+graph-gtk-node.h:77: Warning: GraphGtk: graph_gtk_node_get_output_pads: return value: Missing (element-type) annotation
+graph-gtk-node.h:81: Warning: GraphGtk: graph_gtk_node_is_on_pad: return value: Missing (transfer) annotation
+graph-gtk-view.h:75: Warning: GraphGtk: graph_gtk_view_get_nodes: return value: Missing (element-type) annotation
+*/
 #endif /* __GRAPH_GTK_NODE_H__ */

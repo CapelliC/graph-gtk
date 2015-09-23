@@ -18,7 +18,7 @@ static gboolean graph_gtk_view_button_pressed(GtkWidget* self, GdkEventButton* e
 static gboolean graph_gtk_view_button_released(GtkWidget* widget, GdkEventButton* event);
 static gboolean graph_gtk_view_mouse_moved(GtkWidget* widget, GdkEventMotion* event);
 
-G_DEFINE_TYPE (GraphGtkView, graph_gtk_view, GTK_TYPE_DRAWING_AREA);
+G_DEFINE_TYPE (GraphGtkView, graph_gtk_view, GTK_TYPE_DRAWING_AREA)
 
 static void
 graph_gtk_view_class_init (GraphGtkViewClass *klass)
@@ -146,7 +146,7 @@ graph_gtk_view_init (GraphGtkView *self)
 static void
 graph_gtk_view_dispose (GObject *object)
 {
-  GraphGtkView *self = (GraphGtkView *)object;
+  //CC GraphGtkView *self = (GraphGtkView *)object;
 
   G_OBJECT_CLASS (graph_gtk_view_parent_class)->dispose (object);
 }
@@ -154,7 +154,7 @@ graph_gtk_view_dispose (GObject *object)
 static void
 graph_gtk_view_finalize (GObject *object)
 {
-  GraphGtkView *self = (GraphGtkView *)object;
+  //CC GraphGtkView *self = (GraphGtkView *)object;
 
   g_signal_handlers_destroy (object);
   G_OBJECT_CLASS (graph_gtk_view_parent_class)->finalize (object);

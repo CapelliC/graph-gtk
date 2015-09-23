@@ -72,6 +72,10 @@ void		graph_gtk_view_add_node(GraphGtkView* self, GraphGtkNode* node);
 void		graph_gtk_view_remove_node(GraphGtkView* self, GraphGtkNode* node);
 void		graph_gtk_view_remove_selected_nodes(GraphGtkView* self);
 void		graph_gtk_view_clear(GraphGtkView* self);
+/**
+* graph_gtk_view_get_nodes:
+* Returns: (element-type GraphGtkNode) (transfer none): get all nodes currently on view
+*/
 GList*		graph_gtk_view_get_nodes(GraphGtkView* self);
 void		graph_gtk_view_set_bg(GraphGtkView* self, cairo_surface_t* bg);	//NULL means no background should be rendered
 void		graph_gtk_view_arrange(GraphGtkView* self);	//attempts to auto-arrange nodes in a simple way

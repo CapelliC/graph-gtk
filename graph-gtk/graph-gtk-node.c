@@ -120,7 +120,7 @@ graph_gtk_node_init (GraphGtkNode *self)
 static void
 graph_gtk_node_dispose (GObject *object)
 {
-  GraphGtkNode *self = (GraphGtkNode *)object;
+  //CC GraphGtkNode *self = (GraphGtkNode *)object;
 
   G_OBJECT_CLASS (graph_gtk_node_parent_class)->dispose (object);
 }
@@ -128,7 +128,7 @@ graph_gtk_node_dispose (GObject *object)
 static void
 graph_gtk_node_finalize (GObject *object)
 {
-  GraphGtkNode *self = (GraphGtkNode *)object;
+  //CC GraphGtkNode *self = (GraphGtkNode *)object;
 
   g_signal_handlers_destroy (object);
   G_OBJECT_CLASS (graph_gtk_node_parent_class)->finalize (object);
@@ -474,7 +474,7 @@ graph_gtk_node_recalculate_size_default(GraphGtkNode* self)
   
   //Set pad positions and calculate height
   int count;
-  int m_count;
+  //CC int m_count;
   for(list = self->output_pads, count = 0; list != NULL; list = list->next, count++) {
     GraphGtkPad *pad = (GraphGtkPad*)list->data;
 
