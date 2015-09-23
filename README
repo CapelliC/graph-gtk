@@ -13,3 +13,18 @@ The developer connects to a number of signals within graph-gtk and modifies the 
 COPYING
 =======
 See the COPYING file for license information. This license applies to all software contained herein.
+
+MODIFICATION
+=======
+
+Forked by Capelli Carlo, as a test (and learning) case for PLGI (https://github.com/keriharris/plgi).
+
+I hope in future I'll be able to produce a proper SWI-Prolog pack installer, using Keri' approach.
+In time being, producing the typelib required by PLGI can be done (once built and installed graph-gtk)
+
+$ g-ir-scanner --nsversion=1.0 --warn-all --pkg=graph-gtk --namespace=GraphGtk --include=Gtk-3.0 --library=graph-gtk --output GraphGtk.gir *.[ch]
+$ g-ir-compiler --output=GraphGtk.typelib GraphGtk.gir
+
+Then
+
+$ sudo cp GraphGtk.typelib /usr/lib/girepository-1.0
